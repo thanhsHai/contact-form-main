@@ -1,0 +1,150 @@
+:root {
+  --Green-200: hsl(148, 38%, 91%);
+  --Green-600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500: hsl(186, 15%, 59%);
+  --Grey-900: hsl(187, 24%, 22%);
+}
+
+* {
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Green-200);
+}
+
+.contact-form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: var(--White);
+  border-radius: 15px;
+}
+
+.form-title {
+  font-weight: 700;
+  color: var(--Grey-900);
+}
+
+label {
+  font-size: 12px;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--Grey-500);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+  cursor: pointer;
+  accent-color: var(--Green-600);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid var(--Green-600);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.form-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--Grey-500);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bg-green-600 {
+  background-color: var(--Green-600);
+}
+
+.bg-green-200 {
+  background-color: var(--Green-200);
+}
+
+.form-button {
+  color: var(--White);
+  font-weight: 600;
+  letter-spacing: 0.05cap;
+  height: 45px;
+}
+
+.form-button:hover {
+  background-color: hsl(168, 84%, 19%);
+  color: var(--White);
+}
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.success-pop {
+  background-color: var(--Grey-900);
+  padding: 20px;
+  border-radius: 10px;
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.pop-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: var(--White);
+  letter-spacing: 0.05cap;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.pop-text {
+  color: var(--Grey-500);
+  font-size: 13px;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
